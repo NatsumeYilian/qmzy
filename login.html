@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>澳門城市大學 - 中央認證系統</title>
+<style>
+html, body {
+    font-size: 14px;
+    line-height: 1.5em;
+    background-image: url(images/background.png);
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.login{ width:308px; position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; height:345px; padding:20px; background:#FFFFFF; border-radius:6px}
+.login .logo {
+    height: 95px;
+    margin: 0 0 10px 0;
+    background: url(images/logo.png) no-repeat center;
+    background-size: contain;
+}
+.login label{ color: #999}
+.login .p1{ width:100%; height:36px; border:none; background:#F3F3F3}
+.mt{ margin-top:20px; display:block}
+.p2{ width:100%; border-radius:6px; background:#1BB6B7; color:#FFF; height:42px; margin-top:20px;}
+</style>
+</head>
+
+<body>
+<div class="login">
+<div class="logo"></div>
+<form action="#" name="form1">
+<label>Username(Teacher No./Student No.):</label>
+<input type="text" class="p1" name="u" />
+<label class="mt">Password(Same as URP platform):</label>
+<input type="text" class="p1" name="p" />
+<input type="button" value="LOGIN" class="p2" onclick="login()" />
+</form>
+</div>
+<script>
+function login()
+{
+    u=document.form1.u.value;
+    p=document.form1.p.value;
+
+    if(u=="")
+    {
+        alert('用户名不能为空');
+        return false;
+    }
+    if(u.length<6||u.length>20)
+    {
+        alert('用户名长度为6~20字符');
+        return false;
+    }
+    if(p=="")
+    {
+        alert('密码不能为空');
+        return false;
+    }
+    if(p.length<6||p.length>20)
+    {
+        alert('密码长度为6~20字符');
+        return false;
+    }
+    alert('成功！');
+    window.location.href = 'index.html'; // 添加这行代码实现跳转
+}
+
+</script>
+</body>
+</html>
